@@ -1,0 +1,12 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+    @await Html.PartialAsync("nav")
+    <h1>Вы открыли страницу @ViewData["Title"]</h1>
+    @RenderBody()
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Пользователи";
+}
+
+<div class="container">
+    <div class="user">
+        <p>Имя: @Model.name</p>
+        <p>Фамилия: @Model.lastName</p>
+        <p>Отчество: @Model.age</p>
+        <br />
+        <ul>
+            @foreach (var post in Model.Posts)
+            {
+                <li>
+                    <p>@post.title</p>
+                    <p>@post.content</p>
+                    <p>@post.likeCnt лайка</p>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+@await Html.PartialAsync("someUslessInformation")
